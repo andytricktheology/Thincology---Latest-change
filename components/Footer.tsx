@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { SOCIAL_LINKS } from '../constants';
 
@@ -14,7 +13,6 @@ const Footer: React.FC = () => {
             ))}
         </div>
         <p>&copy; {new Date().getFullYear()} A. U. Thor. All Rights Reserved.</p>
-         <p className="text-sm mt-2">The admin login is at /#/oracle/login</p>
       </div>
     </footer>
   );

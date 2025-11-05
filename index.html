@@ -94,6 +94,13 @@
 </head>
   <body class="bg-white dark:bg-gray-900">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!--
+      Babel is added to transpile JSX (.tsx files) directly in the browser.
+      This is necessary for the app to run on static hosting platforms like Netlify,
+      which do not have a server-side build process to convert JSX into plain JavaScript.
+    -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- The script type is changed to "text/babel" to tell Babel to transpile it. -->
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
   </body>
 </html>
